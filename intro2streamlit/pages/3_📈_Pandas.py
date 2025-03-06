@@ -16,8 +16,8 @@ you can view the table, and then make small edits to format a Plotly chart.
 st.markdown(intro_md)
 
 datasets = {
-    "Fruits and Vegetables": "assets/FruitsVeg_Weights.csv",
-    "Grand Theft Auto V Robberies": "assets/GTA_V_Robberies.csv",
+    "Fruits and Vegetables": "intro2streamlit/assets/FruitsVeg_Weights.csv",
+    "Grand Theft Auto V Robberies": "intro2streamlit/assets/GTA_V_Robberies.csv",
 }
 
 dataset = st.pills("Select a Dataset", 
@@ -50,4 +50,4 @@ box_violin = st.pills("Select a chart type",
 graph = chart_types[box_violin]
 
 box = graph(df, y=data_column, x=category_column)
-st.plotly_chart(box)
+st.plotly_chart(box, height=800)
